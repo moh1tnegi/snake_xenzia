@@ -11,11 +11,12 @@ void print_box() {
 
 int main() {
 	set_borders();
-	int x_move 		 =	 COL_START;
-	int y_move		 =	 ROW_START;
+	int x_move 	 =	 COL_START;
+	int y_move	 =	 ROW_START;
 	char direction	 =	 DIR_START;  // A:up, B:dwn, C:left, D:right
 	char prev_dir	 =	 DIR_START;
-	int pid			 =	 fork();
+	int pid		 =	 fork();
+	
 	while(1) {
 		if(pid) {  // parent process
 			usleep(SLEEP);
@@ -42,7 +43,7 @@ int main() {
 				break;
 			}
 			else if(!get) {  // move pointer back and forth
-				if(direction=='C') 		{	x_move++;	}
+				if(direction=='C') 	{	x_move++;	}
 				else if(direction=='D') {	x_move--;	}
 				else if(direction=='A') {	y_move--; 	}
 				else if(direction=='B') {	y_move++;	}
