@@ -27,11 +27,9 @@ exit(0);
 #define SNAKE_HEAD		'o' ///////// useless
 #define SNAKE_BODY		'o'
 #define FOOD			'*'
-#define SNAKE_LENGTH 	4 // 
+#define SNAKE_LENGTH 		4
 #define SLEEP			140000
-#define SWAP(x, y)	 	x+=y;\
-						y=x-y;\
-						x-=y
+#define SWAP(x, y)	 	x+=y;y=x-y;x-=y
 
 std::queue<std::pair<int, int> > Q;
 std::pair<int, int> baits;
