@@ -7,6 +7,7 @@ void print_box() {
 		}
 		std::cout << '\n';
 	}
+	std::cout << "Total Score: " << (Q.size()-SNAKE_LENGTH)*10 << '\n';
 }
 
 int main() {
@@ -33,7 +34,6 @@ int main() {
 			int get = move_snake(x_move, y_move, direction);
 
 			if(get==1) {
-				std::cout << "Total Score: " << Q.size()-SNAKE_LENGTH;
 				std::cout << "\nChl bhai nikal ab!\n";
 				FILE *fff;
 				fff = fopen("user_input.txt", "w");
